@@ -58,17 +58,17 @@ const Calculator = () => {
       setSecond(null);
     };
 
-    return /*#__PURE__*/React.createElement("button", { onClick: getResult }, "=");
+    returnReact.createElement("button", { onClick: getResult }, "=");
   };
 
   const ResultField = () => {
     // Компонент для отображения поля с текущими введенными данными и результатом вычислений
-    return /*#__PURE__*/(
-      React.createElement(React.Fragment, null, /*#__PURE__*/
+    return(
+      React.createElement(React.Fragment, null,
       React.createElement("div", null,
       first,
       operation,
-      second, /*#__PURE__*/
+      second,
       React.createElement("p", null, "\u0420\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442: ", result))));
 
 
@@ -80,13 +80,13 @@ const Calculator = () => {
     const clearHistoryField = () => {
       setResults([]);
     };
-    return /*#__PURE__*/(
-      React.createElement(React.Fragment, null, /*#__PURE__*/
+    return(
+      React.createElement(React.Fragment, null,
       React.createElement("p", null, text),
-      results.map((item, index) => /*#__PURE__*/
-      React.createElement("p", { key: index }, item)), /*#__PURE__*/
+      results.map((item, index) =>
+      React.createElement("p", { key: index }, item)),
 
-      React.createElement("p", null, /*#__PURE__*/
+      React.createElement("p", null,
       React.createElement("button", {
         className: "btn btn-three",
         style: { width: "auto" },
@@ -107,7 +107,7 @@ const Calculator = () => {
         setFirst(Number(first));
       }
     };
-    return /*#__PURE__*/React.createElement("button", { onClick: setOperationClick }, text);
+    returnReact.createElement("button", { onClick: setOperationClick }, text);
   };
 
   const NumKey = ({ text }) => {
@@ -125,49 +125,49 @@ const Calculator = () => {
         }
       }
     };
-    return /*#__PURE__*/React.createElement("button", { onClick: setNum }, text);
+    returnReact.createElement("button", { onClick: setNum }, text);
   };
 
-  return /*#__PURE__*/ (
+  return (
     // Макет построения калькулятора с кнопками и полями для ввода и результатов
-    React.createElement("div", { className: "center flex-container" }, /*#__PURE__*/
-    React.createElement("div", { className: "calculator" }, /*#__PURE__*/
-    React.createElement("h1", null, "\u041A\u0430\u043B\u044C\u043A\u0443\u043B\u044F\u0442\u043E\u0440"), /*#__PURE__*/
-    React.createElement("div", null, /*#__PURE__*/
-    React.createElement(NumKey, { text: "1" }), /*#__PURE__*/
-    React.createElement(NumKey, { text: "2" }), /*#__PURE__*/
-    React.createElement(NumKey, { text: "3" })), /*#__PURE__*/
+    React.createElement("div", { className: "center flex-container" },
+    React.createElement("div", { className: "calculator" },
+    React.createElement("h1", null, "\u041A\u0430\u043B\u044C\u043A\u0443\u043B\u044F\u0442\u043E\u0440"),
+    React.createElement("div", null,
+    React.createElement(NumKey, { text: "1" }),
+    React.createElement(NumKey, { text: "2" }),
+    React.createElement(NumKey, { text: "3" })),
 
-    React.createElement("div", null, /*#__PURE__*/
-    React.createElement(NumKey, { text: "4" }), /*#__PURE__*/
-    React.createElement(NumKey, { text: "5" }), /*#__PURE__*/
-    React.createElement(NumKey, { text: "6" }), /*#__PURE__*/
-    React.createElement(OperationKey, { text: "/" })), /*#__PURE__*/
+    React.createElement("div", null,
+    React.createElement(NumKey, { text: "4" }),
+    React.createElement(NumKey, { text: "5" }),
+    React.createElement(NumKey, { text: "6" }),
+    React.createElement(OperationKey, { text: "/" })),
 
-    React.createElement("div", null, /*#__PURE__*/
-    React.createElement(NumKey, { text: "7" }), /*#__PURE__*/
-    React.createElement(NumKey, { text: "8" }), /*#__PURE__*/
-    React.createElement(NumKey, { text: "9" }), /*#__PURE__*/
-    React.createElement(OperationKey, { text: "*" })), /*#__PURE__*/
+    React.createElement("div", null,
+    React.createElement(NumKey, { text: "7" }),
+    React.createElement(NumKey, { text: "8" }),
+    React.createElement(NumKey, { text: "9" }),
+    React.createElement(OperationKey, { text: "*" })),
 
-    React.createElement("div", null, /*#__PURE__*/
-    React.createElement(OperationKey, { text: "+" }), /*#__PURE__*/
-    React.createElement(NumKey, { text: "0" }), /*#__PURE__*/
-    React.createElement(OperationKey, { text: "-" }), /*#__PURE__*/
-    React.createElement(ResultKey, null)), /*#__PURE__*/
+    React.createElement("div", null, 
+    React.createElement(OperationKey, { text: "+" }),
+    React.createElement(NumKey, { text: "0" }), 
+    React.createElement(OperationKey, { text: "-" }),
+    React.createElement(ResultKey, null)), 
 
-    React.createElement("div", null, /*#__PURE__*/
-    React.createElement(ResultField, null), /*#__PURE__*/
+    React.createElement("div", null, 
+    React.createElement(ResultField, null), 
     React.createElement("button", {
       className: "btn btn-three",
       style: { width: "100px" },
-      onClick: ClearKey }, "\u0421\u0431\u0440\u043E\u0441\u0438\u0442\u044C"))), /*#__PURE__*/
+      onClick: ClearKey }, "\u0421\u0431\u0440\u043E\u0441\u0438\u0442\u044C"))),
 
 
 
 
 
-    React.createElement("div", null, /*#__PURE__*/
+    React.createElement("div", null,
     React.createElement(HistoryField, null))));
 
 
@@ -176,7 +176,7 @@ const Calculator = () => {
 
 const App = () => {
   // Главный компонент приложения, содержащий компонент Калькулятора
-  return /*#__PURE__*/React.createElement(Calculator, null);
+  returnReact.createElement(Calculator, null);
 };
-// Рендеринг приложения в корневой элементReactDOMReactDOM
-root.render( /*#__PURE__*/React.createElement(App, null));
+// Рендеринг приложения в корневой элементReactDOM
+root.render(React.createElement(App, null));
